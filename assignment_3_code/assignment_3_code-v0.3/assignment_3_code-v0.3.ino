@@ -27,7 +27,6 @@
 uint16_t analog_val_array[4] ={0, 0, 0, 0} ;
 
 //variables for checkButtonState
-uint32_t last_button_pressed = 0;
 int lst_btn_state = HIGH;
 
 QueueHandle_t button_pressed_queue;
@@ -232,7 +231,6 @@ void checkButtonState(void *pvParameters){
           //button_state = !button_state;
           uint8_t tmpevent = 1;
           xQueueSend(button_pressed_queue, &tmpevent, portMAX_DELAY);
-          last_button_pressed = millis();
         }
        }
     }
