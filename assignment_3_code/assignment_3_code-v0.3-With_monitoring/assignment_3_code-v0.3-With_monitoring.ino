@@ -25,6 +25,8 @@
 
 //variables for avgAnalogVal
 uint16_t analog_val_array[4] ={0, 0, 0, 0} ;
+
+//variables for monitoring
 TickType_t diff_wake_time[6] ;
 uint16_t task_ran[6] = {0,0,0,0,0,0};
 uint16_t task_violations[6] = {0,0,0,0,0,0};
